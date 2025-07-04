@@ -1,9 +1,3 @@
-// Copyright Ayush Singh 2021,2022. All Rights Reserved.
-// Project: folio
-// Author contact: https://www.linkedin.com/in/alphaayush/
-// This file is licensed under the MIT License.
-// License text available at https://opensource.org/licenses/MIT
-
 import { MENULINKS, SKILLS } from "../../constants";
 import Image from "next/image";
 import { MutableRefObject, useEffect, useRef, useState } from "react";
@@ -49,8 +43,8 @@ const SkillsSection = () => {
   const renderSectionTitle = (): React.ReactNode => (
     <div className="flex flex-col">
       <p className="section-title-sm seq">SKILLS</p>
-      <h1 className="section-heading seq mt-2">My Skills</h1>
-      <h2 className="text-2xl md:max-w-2xl w-full seq mt-2">
+      <h1 className="mt-2 section-heading seq">My Skills</h1>
+      <h2 className="w-full mt-2 text-2xl md:max-w-2xl seq">
         I like to take responsibility to craft aesthetic user experience using
         modern frontend architecture.{" "}
       </h2>
@@ -59,7 +53,7 @@ const SkillsSection = () => {
 
   const renderBackgroundPattern = (): React.ReactNode => (
     <>
-      <div className="absolute right-0 -bottom-1/3 w-1/5 max-w-xs md:flex hidden justify-end">
+      <div className="absolute right-0 justify-end hidden w-1/5 max-w-xs -bottom-1/3 md:flex">
         <Image
           src="/pattern-r.svg"
           loading="lazy"
@@ -119,7 +113,7 @@ const SkillsSection = () => {
             {renderSkillColumn("FRONTEND DEVELOPMENT", SKILLS.frontend)}
           </div>
           <div className="flex flex-wrap mt-10">
-            <div className="mr-6 mb-6">
+            <div className="mb-6 mr-6">
               {renderSkillColumn(
                 "User Interface, User Experience Design",
                 SKILLS.userInterface

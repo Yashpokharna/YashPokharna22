@@ -1,9 +1,3 @@
-// Copyright Ayush Singh 2021,2022. All Rights Reserved.
-// Project: folio
-// Author contact: https://www.linkedin.com/in/alphaayush/
-// This file is licensed under the MIT License.
-// License text available at https://opensource.org/licenses/MIT
-
 import { MutableRefObject, useEffect, useRef, useState } from "react";
 import {
   Branch,
@@ -460,7 +454,7 @@ const TimelineSection = ({ isDesktop }: IDesktop) => {
 
   const renderSlides = (): React.ReactNode => (
     <div
-      className="max-w-full h-96 shadow-xl bg-gray-800 rounded-2xl overflow-hidden"
+      className="max-w-full overflow-hidden bg-gray-800 shadow-xl h-96 rounded-2xl"
       ref={screenContainer}
     >
       <Image
@@ -470,8 +464,8 @@ const TimelineSection = ({ isDesktop }: IDesktop) => {
         width={644}
         height={34}
       />
-      <div className="relative h-full w-full -mt-2">
-        <div className="absolute top-0 left-0 h-full w-full">
+      <div className="relative w-full h-full -mt-2">
+        <div className="absolute top-0 left-0 w-full h-full">
           {svgCheckpointItems.map((item, index) => (
             <Image
               className={`w-full absolute top-0 object-cover slide-${
@@ -501,8 +495,8 @@ const TimelineSection = ({ isDesktop }: IDesktop) => {
   const renderSectionTitle = (): React.ReactNode => (
     <div className="flex flex-col">
       <p className="section-title-sm seq">MILESTONES</p>
-      <h1 className="section-heading seq mt-2">Timeline</h1>
-      <h2 className="text-2xl md:max-w-2xl w-full seq mt-2">
+      <h1 className="mt-2 section-heading seq">Timeline</h1>
+      <h2 className="w-full mt-2 text-2xl md:max-w-2xl seq">
         A quick recap of proud moments
       </h2>
     </div>
@@ -510,7 +504,7 @@ const TimelineSection = ({ isDesktop }: IDesktop) => {
 
   return (
     <section
-      className="w-full relative select-none min-h-screen section-container py-8 flex flex-col justify-center"
+      className="relative flex flex-col justify-center w-full min-h-screen py-8 select-none section-container"
       id={MENULINKS[3].ref}
     >
       {renderSectionTitle()}
@@ -518,7 +512,7 @@ const TimelineSection = ({ isDesktop }: IDesktop) => {
         <div className="col-span-12 md:col-span-6 line-svg" ref={svgContainer}>
           {renderSVG()}
         </div>
-        <div className="col-span-12 md:col-span-6 md:flex hidden">
+        <div className="hidden col-span-12 md:col-span-6 md:flex">
           {renderSlides()}
         </div>
       </div>

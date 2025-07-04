@@ -1,4 +1,3 @@
-
 import { METADATA } from "../constants";
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
@@ -16,7 +15,7 @@ import QuoteSection from "@/components/home/quote";
 import SkillsSection from "@/components/home/skills";
 import CollaborationSection from "@/components/home/collaboration";
 import Footer from "@/components/common/footer";
-import TimelineSection from "@/components/home/timeline";
+// import TimelineSection from "@/components/home/timeline";
 import Scripts from "@/components/common/scripts";
 import AboutSection from "@/components/home/about";
 
@@ -83,7 +82,7 @@ export default function Home() {
           <CollaborationSection />
           <Footer />
         </main>
-        <Scripts />
+        {/* <Scripts /> */}
       </Layout>
     </>
   );

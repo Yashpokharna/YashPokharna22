@@ -1,9 +1,3 @@
-// Copyright Ayush Singh 2021,2022. All Rights Reserved.
-// Project: folio
-// Author contact: https://www.linkedin.com/in/alphaayush/
-// This file is licensed under the MIT License.
-// License text available at https://opensource.org/licenses/MIT
-
 import styles from "./ProjectTile.module.scss";
 import Image from "next/image";
 import React, { MutableRefObject, useEffect, useRef } from "react";
@@ -61,7 +55,7 @@ const ProjectTile = ({
 
   const renderDescription = (description: string): React.ReactNode => (
     <h2
-      className="text-lg z-10 tracking-wide font-medium"
+      className="z-10 text-lg font-medium tracking-wide"
       style={{ transform: "translateZ(0.8rem)" }}
     >
       {description}
@@ -70,7 +64,7 @@ const ProjectTile = ({
 
   const renderProjectName = (name: string): React.ReactNode => (
     <h1
-      className="text-2xl sm:text-3xl z-10 pl-2"
+      className="z-10 pl-2 text-2xl sm:text-3xl"
       style={{ transform: "translateZ(3rem)" }}
     >
       {name}
@@ -114,7 +108,7 @@ const ProjectTile = ({
       href={project.url}
       target="_blank"
       rel="noreferrer"
-      className="link overflow-hidden rounded-3xl snap-start"
+      className="overflow-hidden link rounded-3xl snap-start"
       style={{
         maxWidth: animationEnabled
           ? "calc(100vw - 2rem)"
@@ -137,7 +131,7 @@ const ProjectTile = ({
           src="/project-bg.svg"
           alt="Project"
           layout="fill"
-          className="absolute w-full h-full top-0 left-0 opacity-20"
+          className="absolute top-0 left-0 w-full h-full opacity-20"
         />
         {renderProjectImage(image, blurImage, name)}
         {renderTopBottomGradient(stop1)}

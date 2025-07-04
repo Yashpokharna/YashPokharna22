@@ -1,9 +1,3 @@
-// Copyright Ayush Singh 2021,2022. All Rights Reserved.
-// Project: folio
-// Author contact: https://www.linkedin.com/in/alphaayush/
-// This file is licensed under the MIT License.
-// License text available at https://opensource.org/licenses/MIT
-
 import { gsap, Linear } from "gsap";
 import React, { MutableRefObject, useEffect, useRef, useState } from "react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -50,14 +44,14 @@ const QuoteSection = () => {
           willChange ? "will-change-opacity" : ""
         }`}
       >
-        I have a <span className="text-strong font-bold">strong</span> obsession
+        I have a <span className="font-bold text-strong">strong</span> obsession
         for attention to detail.
       </h1>
     </div>
   );
 
   return (
-    <section className="w-full relative select-none" ref={targetSection}>
+    <section className="relative w-full select-none" ref={targetSection}>
       {renderQuote()}
     </section>
   );
