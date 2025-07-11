@@ -73,7 +73,7 @@ const AboutSection = () => {
           willChange ? "will-change-opacity" : ""
         }`}
       >
-        I'm a developer focused on creating responsive and user-friendly web experiences.{" "}
+        I am a developer focused on creating responsive and user-friendly web experiences.{" "}
       </span>
       <br />
       <span
